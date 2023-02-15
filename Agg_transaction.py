@@ -59,3 +59,9 @@ fig = px.bar(df, x="Year", y="Transaction_amount", facet_col="State", color="Sta
 
 # create table
 st.write(df)
+
+fig = px.bar(df, x="Year", y="Transaction_amount", color="Quarter", barmode="group", facet_col="State", 
+             category_orders={"Quarter": ["Q1", "Q2", "Q3", "Q4"]})
+
+
+st.plotly_chart(fig)
