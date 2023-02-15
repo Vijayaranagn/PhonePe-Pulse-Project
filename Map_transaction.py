@@ -54,3 +54,10 @@ if district_filter != "All":
 # create table
 st.write(df)
 
+
+
+# Create a scatter plot using Plotly
+fig = px.bar(df, x="District", y="Amount", color="State")
+
+# Show the plot in the Streamlit app
+st.plotly_chart(fig)
