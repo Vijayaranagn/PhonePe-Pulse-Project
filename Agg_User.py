@@ -63,3 +63,7 @@ if brand_filter != "All":
 # Show the filtered data and the plot in the Streamlit app
 st.write(df1)
 
+
+fig = px.bar(df1, x="Quarter", y="Count", color="Brand", barmode="stack", facet_col="Year", facet_row="State")
+
+st.plotly_chart(fig)
