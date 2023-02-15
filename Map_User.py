@@ -54,3 +54,7 @@ if district_filter != "All":
 # create table
 st.write(df)
 
+
+
+fig = px.bar(df, x='Year', y='Users', color='Districts', facet_col="State", barmode='group')
+st.plotly_chart(fig)
