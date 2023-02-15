@@ -54,3 +54,9 @@ if district_filter != "All":
 # create table
 st.write(df)
 
+df_districts = df.groupby(['Districts'])['Amount'].sum().reset_index()
+
+# Create the bar plot using Plotly Express
+fig = px.bar(df_districts, x='Districts', y='Amount', title='Total transaction amount by districts')
+st.plotly_chart(fig)
+
